@@ -1,0 +1,6 @@
+{
+    "name": "vendor/wdm",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

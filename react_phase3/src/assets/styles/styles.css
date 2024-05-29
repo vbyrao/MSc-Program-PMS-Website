@@ -1,0 +1,743 @@
+/* 
+YASHWANTH RAO VARALA BALAJI(1001916698),SRILEKHYABUKKAPATNAM(1002067807),
+RUBAN ESWARAVELU(1002018133), JAYANTH REDDY GUNDALA(1002067847),
+UMESH CHANDRA KARAGATLA(1002074938)
+
+Colors used
+  --primary-color: #007bff;
+  --background-color: #f2f2f2;
+  --text-color: #fff;
+  --text-light-color: #888;
+  --error-color: #f44336;
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navbar {
+  background-color: #007bff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.navbar-list li {
+  float: left;
+  margin: 0;
+}
+
+.navbar-list li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-list li a.active {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.navbar-list li a:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1000px;
+}
+
+/* Additional styling for main content */
+.container h1 {
+  font-size: 24px;
+}
+
+.container p {
+  font-size: 16px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button,
+a.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#assessment {
+  text-align: left;
+}
+
+#assessment li {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #007bff;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+sidebar {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  margin-top: 20px;
+}
+
+.main {
+  flex: 2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-tabs ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-tabs a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-tabs a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content#profile {
+  display: block;
+}
+
+.enroll-button,
+.unenroll-button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+.add-button,
+.close-button {
+  padding: 6px 12px;
+  cursor: pointer;
+  max-height: 40px;
+}
+
+/* Your CSS styles for the existing container and heading */
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.notification p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.timestamp {
+  color: #888;
+  font-size: 14px;
+}
+
+.chat {
+  flex: 2;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat h2 {
+  margin: 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+}
+
+.chat-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-list li a {
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+}
+
+.chat-list li.active {
+  background-color: #007bff;
+}
+
+.chat-list li.active a {
+  color: #fff;
+}
+
+.chat-list li a:hover {
+  text-decoration: underline;
+}
+
+.chat-messages {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.left-message {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  clear: both;
+  max-width: 80%;
+  text-align: left;
+}
+
+.right-message {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  float: right;
+  clear: both;
+  max-width: 80%;
+  text-align: right;
+}
+
+.chat-input {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.chat-input button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+/* Style for the dialog overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Style for the dialog box */
+.dialog {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course {
+  margin-bottom: 20px;
+}
+
+.course-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+details > summary {
+  padding: 4px;
+}
+details summary > * {
+  display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-list {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-list.active {
+    display: grid;
+  }
+
+  .navbar-list {
+    text-align: left;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+  .nav-tabs ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .nav-tabs ul li {
+    text-align: center;
+    min-width: 120px;
+  }
+  .nav-tabs a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Margin classes */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.ml-4 {
+  margin-left: 4rem;
+}
+
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.ml-6 {
+  margin-left: 6rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+.mr-4 {
+  margin-right: 4rem;
+}
+
+.mr-5 {
+  margin-right: 5rem;
+}
+
+.mr-6 {
+  margin-right: 6rem;
+}
+
+/* Padding classes */
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.pt-6 {
+  padding-top: 6rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pl-4 {
+  padding-left: 4rem;
+}
+
+.pl-5 {
+  padding-left: 5rem;
+}
+
+.pl-6 {
+  padding-left: 6rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.pr-3 {
+  padding-right: 3rem;
+}
+
+.pr-4 {
+  padding-right: 4rem;
+}
+
+.pr-5 {
+  padding-right: 5rem;
+}
+
+.pr-6 {
+  padding-right: 6rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.pb-6 {
+  padding-bottom: 6rem;
+}
